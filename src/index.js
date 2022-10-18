@@ -7,12 +7,13 @@ const app=express();
 const swaggerJsDoc=require('swagger-jsdoc');
 const swaggerDoc = require('swagger-ui-express');
 const swaggerDocumation = require('./helper/documentation');
+
 app.use("/api-docs",swaggerDoc.serve);
 app.use("/api-docs",swaggerDoc.setup(swaggerDocumation));
 
 
 app.use(bodyparser.json());
-app.use('/',route);
+app.use(require('./routes/route'));
 
 
 mongoose.connect("mongodb+srv://sumandev:aBosU15RXTGZYkKq@cluster0.4du2i.mongodb.net/weather-app?retryWrites=true&w=majority",{
