@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "5c2a99a7-44e7-4dc5-9348-ecd76999c3d5",
+		"name": "Weather Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"testuser5\",\r\n\"email\":\"testuser5@email.com\",\r\n\"phone\":\"9932584922\",\r\n\"password\":\"Abcd@1234\",\r\n\"country\":\"india\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create-user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"testuser5@email.com\",\r\n \"password\":\"Abcd@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create city",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"purulia\",\r\n\"state\":\"west bengal\",\r\n\"country\":\"india\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create-city",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "city list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRhYmNhMDlkY2I0MDAyMWU1ZDBjZWQiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjU5Nzg0NDF9.rZ5ykAIWEFkNd9djsoWTn9T1aXtUyLM8RuTBrbj0kL0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/city-list?page=1&limit=2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city-list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"date\":\"15/02/2020\",\r\n\"temperature\":\"21^C\",\r\n\"maxTemperature\":\"27^C\",\r\n\"minTemperature\":\"21^C\",\r\n\"condition\":\"sunny\",\r\n\"windSpeed\":\"4kmph\",\r\n\"humidity\":\"61%\",\r\n\"cityId\":\"634a744d5f18fd138e7775af\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create-weather",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create forecast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"sunday\":{\r\n    \"date\":\"22/05/2021\",\r\n    \"temperature\":\"21^C\"\r\n},\r\n\"monday\":{\r\n    \"date\":\"23/05/2021\",\r\n    \"temperature\":\"25^C\"\r\n},\"tuesday\":{\r\n    \"date\":\"24/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"wednesday\":{\r\n    \"date\":\"25/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"thursday\":{\r\n    \"date\":\"26/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n},\"friday\":{\r\n    \"date\":\"27/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"saturday\":{\r\n    \"date\":\"28/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n}\r\n,\r\n\"cityId\":\"634a744d5f18fd138e7775af\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create-forecast",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-forecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRhYmNhMDlkY2I0MDAyMWU1ZDBjZWQiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjU5Nzg0NDF9.rZ5ykAIWEFkNd9djsoWTn9T1aXtUyLM8RuTBrbj0kL0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/live-weather/:cityId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"live-weather",
+						":cityId"
+					],
+					"variable": [
+						{
+							"key": "cityId",
+							"value": "634a744d5f18fd138e7775af"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forecast",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "a2d-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRhYmNhMDlkY2I0MDAyMWU1ZDBjZWQiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjU5Nzg0NDF9.rZ5ykAIWEFkNd9djsoWTn9T1aXtUyLM8RuTBrbj0kL0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/forecast/:cityId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forecast",
+						":cityId"
+					],
+					"variable": [
+						{
+							"key": "cityId",
+							"value": "634a744d5f18fd138e7775af"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

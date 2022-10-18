@@ -1,0 +1,74 @@
+const mongoose=require('mongoose');
+const ObjectId=mongoose.Schema.Types.ObjectId;
+
+const forecastSchema= new mongoose.Schema({
+sunday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String,
+        required:true
+    }
+},
+monday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String,
+        required:true
+    }
+},
+tuesday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String,
+        required:true
+    }
+},
+wednesday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String,
+        required:true
+    }
+},
+thursday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String,
+        required:true
+    } 
+},
+friday:{
+    date:{
+        type:String,required:true
+    }, 
+    temperature:{ 
+        type:String, 
+        required:true
+    }
+},
+saturday:{
+    date:{
+        type:String,required:true
+    },
+    temperature:{
+        type:String, 
+        required:true
+    }
+},
+cityId:{
+    type:ObjectId,ref:"city",
+    required:true
+}},{timestamps:true}
+)
+
+module.exports=mongoose.model("forecast",forecastSchema);
