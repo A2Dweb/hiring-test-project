@@ -1,3 +1,4 @@
+const dotenv=require('dotenv').config();
 const express=require('express');
 const bodyparser=require('body-parser');
 const mongoose=require('mongoose');
@@ -16,11 +17,11 @@ app.use(bodyparser.json());
 app.use(require('./routes/route'));
 
 
-mongoose.connect("mongodb+srv://sumandev:aBosU15RXTGZYkKq@cluster0.4du2i.mongodb.net/weather-app?retryWrites=true&w=majority",{
+mongoose.connect(process.env.CLUSTER,{
     useNewUrlParser:true})
 .then(()=>console.log("mongodb connected")) 
-.catch(err=>console.log(err))
+.catch(err=>console.log(err))  
 
-app.listen(process.env.PORT||3000,function(){
-    console.log("running on port number",(process.env.PORT||3000))
-})
+app.listen(process.env.PORT,function(){
+    console.log("running on local port")
+}) 

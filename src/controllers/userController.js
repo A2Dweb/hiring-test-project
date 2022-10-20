@@ -22,14 +22,15 @@ const createUser=async function(req,res){
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
           return res.status(400).send({ status: false, message: "Email should be a valid email address" })
         }
+        let checkemail = await userModel.findOne({ email: data.email })
+        if (checkemail) { return res.status(400).send({ message: "email Already exist" }) }
+
         if (!isValid(phone)) { return res.status(400).send({ status: false, message: "Phone Number is required" }) }
-
-
         if (!(/^[6-9]\d{9}$/.test(data.phone))) {
           return res.status(400).send({ status: false, message: "phone number should be valid number" })
         }
      
-        let checkPhone = await userModel.findOne({ phone: data.phone })
+        let checkPhone = await userModel.findOne({ phone: data.phone }) 
         if (checkPhone) { return res.status(400).send({ message: "phone Already exist" }) }
         if (!isValid(country)) { return res.status(400).send({ status: false, message: "country is required" }) }
 
@@ -73,7 +74,7 @@ try{
     userId:loginUser._id,
     app:"weather",
     dev:"suman" 
-},"THESECRETKEY")
+},process.env.KEY)
 res.header("a2d-key",token)
 return res.status(201).send({msg:"login successfull",token})
 }

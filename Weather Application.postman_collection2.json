@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"name\":\"testuser5\",\r\n\"email\":\"testuser5@email.com\",\r\n\"phone\":\"9932584922\",\r\n\"password\":\"Abcd@1234\",\r\n\"country\":\"india\"\r\n\r\n}",
+					"raw": "{\r\n\"name\":\"testuser7\",\r\n\"email\":\"testuser7@email.com\",\r\n\"phone\":\"9932584925\",\r\n\"password\":\"Abcd@1234\",\r\n\"country\":\"india\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +39,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"email\":\"testuser5@email.com\",\r\n \"password\":\"Abcd@1234\"\r\n}",
+					"raw": "{\r\n\"email\":\"testuser7@email.com\",\r\n \"password\":\"Abcd@1234\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -66,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"name\":\"purulia\",\r\n\"state\":\"west bengal\",\r\n\"country\":\"india\"\r\n}",
+					"raw": "{\r\n\"name\":\"alipurduar\",\r\n\"state\":\"west bengal\",\r\n\"country\":\"india\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -89,6 +89,16 @@
 		{
 			"name": "city list",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzUwZTM0NTQyNjljMDQzMjMwOGYzY2YiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjYyNDU0NzV9.kt0qRVtE0_9YD_5LK-H6xOkyJtwDyJ1uxLhbeMw9_GQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -98,7 +108,7 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:3000/city-list?page=1&limit=2",
+					"raw": "localhost:3000/city-list?page=1&limit=4",
 					"host": [
 						"localhost"
 					],
@@ -113,7 +123,7 @@
 						},
 						{
 							"key": "limit",
-							"value": "2"
+							"value": "4"
 						}
 					]
 				}
@@ -127,7 +137,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"date\":\"15/02/2020\",\r\n\"temperature\":\"21^C\",\r\n\"maxTemperature\":\"27^C\",\r\n\"minTemperature\":\"21^C\",\r\n\"condition\":\"sunny\",\r\n\"windSpeed\":\"4kmph\",\r\n\"humidity\":\"61%\",\r\n\"cityId\":\"634a744d5f18fd138e7775af\"\r\n}",
+					"raw": "{\"date\":\"19/02/2020\",\r\n\"temperature\":\"21^C\",\r\n\"maxTemperature\":\"27^C\",\r\n\"minTemperature\":\"21^C\",\r\n\"condition\":\"sunny\",\r\n\"windSpeed\":\"4kmph\",\r\n\"humidity\":\"61%\",\r\n\"cityId\":\"634f8d7eebecf6f12604ffbc\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,7 +164,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"sunday\":{\r\n    \"date\":\"22/05/2021\",\r\n    \"temperature\":\"21^C\"\r\n},\r\n\"monday\":{\r\n    \"date\":\"23/05/2021\",\r\n    \"temperature\":\"25^C\"\r\n},\"tuesday\":{\r\n    \"date\":\"24/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"wednesday\":{\r\n    \"date\":\"25/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"thursday\":{\r\n    \"date\":\"26/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n},\"friday\":{\r\n    \"date\":\"27/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"saturday\":{\r\n    \"date\":\"28/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n}\r\n,\r\n\"cityId\":\"634a744d5f18fd138e7775af\"\r\n}",
+					"raw": "{\r\n\"sunday\":{\r\n    \"date\":\"22/05/2021\",\r\n    \"temperature\":\"21^C\"\r\n},\r\n\"monday\":{\r\n    \"date\":\"23/05/2021\",\r\n    \"temperature\":\"25^C\"\r\n},\"tuesday\":{\r\n    \"date\":\"24/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"wednesday\":{\r\n    \"date\":\"25/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"thursday\":{\r\n    \"date\":\"26/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n},\"friday\":{\r\n    \"date\":\"27/05/2021\",\r\n    \"temperature\":\"23^C\"\r\n},\r\n\"saturday\":{\r\n    \"date\":\"28/05/2021\",\r\n    \"temperature\":\"24^C\"\r\n}\r\n,\r\n\"cityId\":\"634f8e6eebecf6f12604ffd4\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -177,11 +187,21 @@
 		{
 			"name": "weather",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzUwZTM0NTQyNjljMDQzMjMwOGYzY2YiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjYyNDU0NzV9.kt0qRVtE0_9YD_5LK-H6xOkyJtwDyJ1uxLhbeMw9_GQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
 						"key": "a2d-key",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRhYmNhMDlkY2I0MDAyMWU1ZDBjZWQiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjU5Nzg0NDF9.rZ5ykAIWEFkNd9djsoWTn9T1aXtUyLM8RuTBrbj0kL0",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRmOGM1ZWYxNTVlMjMyYzU1NzVmZDEiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjYxNTc5MzB9.Le4W6NJGAlVs5l9Kc-tQumPXpCeTvTns6MpszAbUiT8",
 						"type": "default"
 					}
 				],
@@ -198,7 +218,7 @@
 					"variable": [
 						{
 							"key": "cityId",
-							"value": "634a744d5f18fd138e7775af"
+							"value": "634f8e6eebecf6f12604ffd4"
 						}
 					]
 				}
@@ -208,11 +228,21 @@
 		{
 			"name": "forecast",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzUwZTM0NTQyNjljMDQzMjMwOGYzY2YiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjYyNDU0NzV9.kt0qRVtE0_9YD_5LK-H6xOkyJtwDyJ1uxLhbeMw9_GQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
 						"key": "a2d-key",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRhYmNhMDlkY2I0MDAyMWU1ZDBjZWQiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjU5Nzg0NDF9.rZ5ykAIWEFkNd9djsoWTn9T1aXtUyLM8RuTBrbj0kL0",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmciOiJhMmQiLCJ1c2VySWQiOiI2MzRmOGM1ZWYxNTVlMjMyYzU1NzVmZDEiLCJhcHAiOiJ3ZWF0aGVyIiwiZGV2Ijoic3VtYW4iLCJpYXQiOjE2NjYxNTc5MzB9.Le4W6NJGAlVs5l9Kc-tQumPXpCeTvTns6MpszAbUiT8",
 						"type": "default"
 					}
 				],
@@ -229,7 +259,7 @@
 					"variable": [
 						{
 							"key": "cityId",
-							"value": "634a744d5f18fd138e7775af"
+							"value": "634f8e6eebecf6f12604ffd4"
 						}
 					]
 				}
