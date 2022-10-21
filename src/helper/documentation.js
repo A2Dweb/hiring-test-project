@@ -12,12 +12,24 @@ const security = [
           version: "0.0.1",
           description: "this is an api documentaion",
       },
+    //   "schemes": [
+    //     "https",
+    //     "http"
+
+    // ],
       servers: [
    
         {
             url: "http://localhost:3000/",
-            description: "Local dev",
+            description: "Local dev"
+          
+            
+        },
+        {
+          url:"dynamic",
+          description:"dynamic"
         }
+      
       ],
       components: {
         securitySchemes: {
@@ -703,7 +715,7 @@ const security = [
                   }
                 }
               },
-              "/live-weather/:cityId": {
+              "/live-weather/:{cityId}": {
                 get: {
                   tags: ["user"],
                   description: "live weather",
@@ -712,7 +724,7 @@ const security = [
                         name:"cityId",
                         in: "path",
                         description: "mention the cityId",
-                        type: "objectId",
+                        type: "ObjectId",
                          example: "634f8e6eebecf6f12604ffd4"
                     }
                     

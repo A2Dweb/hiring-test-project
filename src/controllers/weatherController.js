@@ -1,5 +1,6 @@
 const weatherModel=require('../models/weatherModel');
 const mongoose=require('mongoose')
+const cityModel=require('../models/cityModel')
 const ObjectId = mongoose.Types.ObjectId
 
 const isValid = function (value) {
@@ -30,7 +31,7 @@ const viewWeather=async function(req,res){
  
  if(!ObjectId.isValid(cityId)) return res.status(400).send({status:false,msg:'cityId is not valid'})
 
- let noWeather=await weatherModel.findOne({cityId:cityId})
+ let noWeather=await cityModel.findOne({cityId:cityId})
  if(!noWeather) return res.status(404).send({status:false,msg:"no data found"})
  let weather=await weatherModel.findOne({cityId:cityId}).select({_id:0,date:1,temperature:1,maxTemperature:1,minTemperature:1,condition:1,windSpeed:1,humidity:1}).sort({createdAt:-1})
  return res.status(200).send({status:true,msg:"live weather",data:weather})
