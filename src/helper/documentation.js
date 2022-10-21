@@ -715,7 +715,7 @@ const security = [
                   }
                 }
               },
-              "/live-weather/:{cityId}": {
+              "/live-weather/{cityId}": {
                 get: {
                   tags: ["user"],
                   description: "live weather",
@@ -724,7 +724,7 @@ const security = [
                         name:"cityId",
                         in: "path",
                         description: "mention the cityId",
-                        type: "ObjectId",
+                        type: "string",
                          example: "634f8e6eebecf6f12604ffd4"
                     }
                     
@@ -792,7 +792,7 @@ const security = [
                 }
               }
             },
-            "/forecast/:cityId": {
+            "/forecast/{cityId}": {
               get: {
                 tags: ["user"],
                 description: "forecast",
