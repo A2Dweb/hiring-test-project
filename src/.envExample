@@ -1,0 +1,3 @@
+CLUSTER=official a2d hiring app CLUSTER
+PORT= use local port
+KEY= this a secret key used in jwt token
