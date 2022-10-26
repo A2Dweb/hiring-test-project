@@ -24,7 +24,7 @@ const listOfCities=async function(req,res){
        let limit=req.query.limit;
        
         let list=await cityModel.find()
-        .skip((page-1)*limit).select({name:1,state:1,country:1,_id:0}).limit(limit).sort({createdAt:-1})
+        .skip((page-1)*limit).select({name:1,state:1,country:1,_id:1}).limit(limit).sort({createdAt:-1})
         return res.status(200).send({msg:"list of all cities",list})
 
     }

@@ -31,7 +31,7 @@ const recentForecast=async function(req,res){
       let city=await forecastModel.findOne({cityId:cityId})
       if(!city) return res.status(400).send({status:false,msg:"no data found"})
 
-     let recent=await forecastModel.find({cityId:cityId}).select({_id:0,createdAt:0,updatedAt:0,__v:0,cityId:0}).sort({createdAt:-1})
+     let recent=await forecastModel.find({cityId:cityId}).select({_id:0,createdAt:0,updatedAt:0,__v:0}).sort({createdAt:-1})
      return res.status(200).send({FORECAST:recent})
 
   

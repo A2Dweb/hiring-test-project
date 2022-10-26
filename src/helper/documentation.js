@@ -26,8 +26,8 @@ const security = [
             
         },
         {
-          url:"dynamic",
-          description:"dynamic"
+          url:"https://hiring-test.a2dweb.com/",
+          description:"production"
         }
       
       ],
@@ -359,22 +359,23 @@ const security = [
                          example: {  
                          "msg": "list of all cities",
                          "list": [
-                          {
+                          {   "_id":"634fa407e8d8760a675cae88",
+                              "name": "kolkata",
+                              "state": "west bengal",
+                              "country": "india"
+                             
+                          },
+                          {    "_id": "634fa3979c7e7644c2f1d609",
                               "name": "kolkata",
                               "state": "west bengal",
                               "country": "india"
                           },
-                          {
-                              "name": "kolkata",
-                              "state": "west bengal",
-                              "country": "india"
-                          },
-                          {
+                          {    "_id": "634fa3979c7e7644c2f1d609",
                               "name": "alipurduar",
                               "state": "west bengal",
                               "country": "india"
                           },
-                          {
+                          {    "_id": "634fa3979c7e7644c2f1d609",
                               "name": "behala",
                               "state": "west bengal",
                               "country": "india"
@@ -433,25 +434,25 @@ const security = [
                                 schema:{
                                   type: "object",
                                   properties:{
-                                    date:{
+                                    time:{
                                      type:"string",
                                      description:"enter date",
-                                     example:"21/05/2020"
+                                     example:"6:00AM"
                                   },
                                   temperature:{
                                       type:"string",
                                       description:"type temperature",
-                                      example:"24^C"
+                                      example:24
                                    },
                                    maxTemperature:{
                                      type:"string",
                                      description:"enter maximum temperature",
-                                     example:"28^C"
+                                     example:28
                                    },
                                    minTemperature:{
                                     type:"string",
                                     description:"enter minimum temperature",
-                                    example:"21^C"
+                                    example:21
                                   },
                                   condition:{
                                     type:"string",
@@ -461,12 +462,12 @@ const security = [
                                   windSpeed:{
                                     type:"string",
                                     description:"enter wind speed",
-                                    example:"15kmph"
+                                    example:15
                                   },  
                                   humidity:{
                                     type:"string",
                                     description:"enter humidity",
-                                    example:"60%"
+                                    example:60
                                   },
                                   cityId:{
                                     type:"string",
@@ -492,13 +493,13 @@ const security = [
                             "status": true,
                             "msg": "weather condition created",
                             "weather": {
-                                "date": "19/02/2020",
-                                "temperature": "21^C",
-                                "maxTemperature": "27^C",
-                                "minTemperature": "21^C",
+                                "time": "7:00AM",
+                                "temperature": 21,
+                                "maxTemperature": 27,
+                                "minTemperature": 21,
                                 "condition": "sunny",
-                                "windSpeed": "4kmph",
-                                "humidity": "61%",
+                                "windSpeed": 4,
+                                "humidity": 61,
                                 "cityId": "634f8e6eebecf6f12604ffd4",
                                 "_id": "634fc67187469217c127c818",
                                 "createdAt": "2022-10-19T09:42:09.094Z",
@@ -565,7 +566,7 @@ const security = [
                              description:"enter days name",
                              example:{
                               "date":"22/05/2021",
-                              "temperature":"21^C"
+                              "temperature":21
                           }
                           },
                           monday:{
@@ -573,7 +574,7 @@ const security = [
                             description:"enter days name",
                             example:{
                              "date":"22/05/2021",
-                             "temperature":"21^C"
+                             "temperature":21
                          }
                          },
                          tuesday:{
@@ -581,7 +582,7 @@ const security = [
                           description:"enter days name",
                           example:{
                            "date":"22/05/2021",
-                           "temperature":"21^C"
+                           "temperature":21
                        }
                        },
                        wednesday:{
@@ -589,7 +590,7 @@ const security = [
                         description:"enter days name",
                         example:{
                          "date":"22/05/2021",
-                         "temperature":"21^C"
+                         "temperature":21
                      }
                      },   
                      thursday:{
@@ -597,7 +598,7 @@ const security = [
                       description:"enter days name",
                       example:{
                        "date":"22/05/2021",
-                       "temperature":"21^C"
+                       "temperature":21
                    }
                    },
                    friday:{
@@ -605,7 +606,7 @@ const security = [
                     description:"enter days name",
                     example:{
                      "date":"22/05/2021",
-                     "temperature":"21^C"
+                     "temperature":21
                  }
                  },
                  saturday:{
@@ -613,14 +614,14 @@ const security = [
                   description:"enter days name",
                   example:{
                    "date":"22/05/2021",
-                   "temperature":"21^C"
+                   "temperature":21
                }
                },
 
                            cityId:{
                               type:"string",
-                              description:"type state name",
-                              example:"west bengal"
+                              description:"state name",
+                              example:"6352c16d677e65ea59d5abb9"
                            }
                       
                         
@@ -643,31 +644,31 @@ const security = [
                               "newForecast": {
                                   "sunday": {
                                       "date": "22/05/2021",
-                                      "temperature": "21^C"
+                                      "temperature": 25
                                   },
                                   "monday": {
                                       "date": "23/05/2021",
-                                      "temperature": "25^C"
+                                      "temperature": 23
                                   },
                                   "tuesday": {
                                       "date": "24/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 21
                                   },
                                   "wednesday": {
                                       "date": "25/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "thursday": {
                                       "date": "26/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 27
                                   },
                                   "friday": {
                                       "date": "27/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 26
                                   },
                                   "saturday": {
                                       "date": "28/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   },
                                   "cityId": "634f8e6eebecf6f12604ffd4",
                                   "_id": "634fcd6a3f8159f68e8d260e",
@@ -744,13 +745,13 @@ const security = [
                             "status": true,
                             "msg": "live weather",
                             "data": {
-                                "date": "21/05/2020",
-                                "temperature": "24^C",
-                                "maxTemperature": "28^C",
-                                "minTemperature": "21^C",
+                                "time": "8:00AM",
+                                "temperature": 24,
+                                "maxTemperature": 28,
+                                "minTemperature": 21,
                                 "condition": "windy",
-                                "windSpeed": "15kmph",
-                                "humidity": "60%"
+                                "windSpeed": 15,
+                                "humidity": 60
                             }
                         }
                          
@@ -822,121 +823,121 @@ const security = [
                               {
                                   "sunday": {
                                       "date": "22/05/2021",
-                                      "temperature": "21^C"
+                                      "temperature": 21
                                   },
                                   "monday": {
                                       "date": "23/05/2021",
-                                      "temperature": "25^C"
+                                      "temperature": 25
                                   },
                                   "tuesday": {
                                       "date": "24/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "wednesday": {
                                       "date": "25/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "thursday": {
                                       "date": "26/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   },
                                   "friday": {
                                       "date": "27/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "saturday": {
                                       "date": "28/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   }
                               },
                               {
                                   "sunday": {
                                       "date": "22/05/2021",
-                                      "temperature": "21^C"
+                                      "temperature": 21
                                   },
                                   "monday": {
                                       "date": "23/05/2021",
-                                      "temperature": "25^C"
+                                      "temperature": 25
                                   },
                                   "tuesday": {
                                       "date": "24/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "wednesday": {
                                       "date": "25/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature":23
                                   },
                                   "thursday": {
                                       "date": "26/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   },
                                   "friday": {
                                       "date": "27/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "saturday": {
                                       "date": "28/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature":24
                                   }
                               },
                               {
                                   "sunday": {
                                       "date": "22/05/2021",
-                                      "temperature": "21^C"
+                                      "temperature": 21
                                   },
                                   "monday": {
                                       "date": "23/05/2021",
-                                      "temperature": "25^C"
+                                      "temperature": 25
                                   },
                                   "tuesday": {
                                       "date": "24/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "wednesday": {
                                       "date": "25/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "thursday": {
                                       "date": "26/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   },
                                   "friday": {
                                       "date": "27/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "saturday": {
                                       "date": "28/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   }
                               },
                               {
                                   "sunday": {
                                       "date": "22/05/2021",
-                                      "temperature": "21^C"
+                                      "temperature": 21
                                   },
                                   "monday": {
                                       "date": "23/05/2021",
-                                      "temperature": "25^C"
+                                      "temperature": 25
                                   },
                                   "tuesday": {
                                       "date": "24/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "wednesday": {
                                       "date": "25/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "thursday": {
                                       "date": "26/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   },
                                   "friday": {
                                       "date": "27/05/2021",
-                                      "temperature": "23^C"
+                                      "temperature": 23
                                   },
                                   "saturday": {
                                       "date": "28/05/2021",
-                                      "temperature": "24^C"
+                                      "temperature": 24
                                   }
                               }
                           ]
