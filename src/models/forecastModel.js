@@ -7,7 +7,7 @@ sunday:{
         type:String,required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     }
 },
@@ -16,7 +16,7 @@ monday:{
         type:String,required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     }
 },
@@ -25,7 +25,7 @@ tuesday:{
         type:String,required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     }
 },
@@ -34,7 +34,7 @@ wednesday:{
         type:String,required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     }
 },
@@ -43,7 +43,7 @@ thursday:{
         type:String,required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     } 
 },
@@ -52,7 +52,7 @@ friday:{
         type:String,required:true
     }, 
     temperature:{ 
-        type:String, 
+        type:Number, 
         required:true
     }
 },
@@ -61,7 +61,7 @@ saturday:{
         type:String,required:true
     },
     temperature:{
-        type:String, 
+        type:Number, 
         required:true
     }
 },

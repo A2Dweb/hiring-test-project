@@ -4,30 +4,30 @@ const ObjectId=mongoose.Schema.Types.ObjectId;
 
 const weatherSchema=new mongoose.Schema({
 
-    date:{
+    time:{
         type:String,
         required:true
     },
     temperature:{
-        type:String,
+        type:Number,
         required:true
     },
     maxTemperature:{
-        type:String,required:true
+        type:Number,required:true
     },
     minTemperature:{
-        type:String,
+        type:Number,
         required:true
     },
     condition:{
         type:String,required:true
     },
     windSpeed:{
-        type:String,
+        type:Number,
         required:true
     },
     humidity:{
-        type:String,
+        type:Number,
         required:true
         },
         cityId:{
