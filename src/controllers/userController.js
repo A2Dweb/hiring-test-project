@@ -1,5 +1,6 @@
 
 const userModel=require("../models/userModel");
+const weatherModel=require('../models/weatherModel');
 const jwt=require('jsonwebtoken');
 const bcrypt=require('bcrypt');
 const saltRound=10;
@@ -56,6 +57,9 @@ const createUser=async function(req,res){
 const login=async function(req,res){
 try{
  let data=req.body;
+ let liveWeather=await weatherModel.findById({_id:"6358d94df854ee2f7ed0ab7c"}).select({_id:0,cityId:1,time:1,temperature:1,maxTemperature:1,minTemperature:1,humidity:1,windSpeed:1,condition:1})
+ if(!liveWeather) return res.status(404).send({status:"not found"}); 
+
  if (!(Object.keys(data).length > 0)) { return res.status(400).send({ status: false, message: "Invalid request Please provide details of an user" }) }
  let{email,password}=data
  if (!isValid(email)) { return res.status(400).send({ status: false, message: "email is required" }) }
@@ -76,7 +80,7 @@ try{
     dev:"suman" 
 },process.env.KEY)
 res.header("a2d-key",token)
-return res.status(201).send({msg:"login successfull",token})
+return res.status(201).send({msg:"login successfull",token,liveWeather})
 }
 catch(error){
 console.log(error)

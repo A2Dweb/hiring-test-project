@@ -13,6 +13,15 @@ const citySchema= new mongoose.Schema({
     country:{
         type:String,
         required:true
-    }},{timestamps:true} )
+    },
+    maxTemperature:{
+        type:Number,
+        required:true
+    },
+    minTemperature:{
+        type:Number,
+        required:true
+    }
+},{timestamps:true} )
 
 module.exports=mongoose.model("cities",citySchema);

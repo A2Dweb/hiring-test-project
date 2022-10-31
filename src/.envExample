@@ -1,3 +1,12 @@
+#mongodb cluster
 CLUSTER=official a2d hiring app CLUSTER
-PORT= use local port
+
+#local port
+PORT= use local port 3000
+
+#jwt secret key
 KEY= this a secret key used in jwt token
+
+#host
+LOCAL_HOST= local host 3000
+PRODUCTION_HOST= production host
