@@ -53,8 +53,8 @@ const recentForecast=async function(req,res){
 const createSmallForecast=async function(req,res){
     try{
       let data=req.body;
-      let{time,temperature,condition,cityId}=data;
-      if (!isValidTitle(condition)) { return res.status(400).send({ status: false, message: "condition must be:sunny||partly-cloudy||cloudy||rainy||snow||stormy||thunder" }) }
+      //let{time,temperature,condition,cityId}=data;
+      //if (!isValidTitle(condition)) { return res.status(400).send({ status: false, message: "condition must be:sunny||partly-cloudy||cloudy||rainy||snow||stormy||thunder" }) }
       let newData=await smallForecastModel.create(data)
       return res.status(201).send({status:true,msg:"data created",DATA:newData})
     }
@@ -67,7 +67,7 @@ const getSmallForecast=async function(req,res){
     try{
        let cityId=req.params.cityId;
        if(!ObjectId.isValid(cityId)) return res.status(400).send({status:false,msg:'cityId is not valid'})
-       let getData=await smallForecastModel.findOne({cityId:cityId}).select({time:1,temperature:1,condition:1,cityId:1,_id:0}).sort({createdAt:-1})
+       let getData=await smallForecastModel.find({cityId:cityId}).sort({createdAt:-1})
        return res.status(200).send({DATA:getData})
     }
     catch(error){
