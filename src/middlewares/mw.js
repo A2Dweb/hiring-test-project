@@ -1,4 +1,5 @@
 const jwt=require('jsonwebtoken')
+require('dotenv').config();
 
 const authentication = function (req, res, next) {
     try {
@@ -8,6 +9,7 @@ const authentication = function (req, res, next) {
         if (!token) {
             return res.status(400).send({ status: false, message: "token must be present" });
         }
+       
         const decodedToken = jwt.verify(token,process.env.KEY);
         
         if (!decodedToken) {

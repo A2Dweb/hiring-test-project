@@ -28,10 +28,12 @@ const createWeather=async function(req,res){
 const viewWeather=async function(req,res){
     try{
  let cityId=req.params.cityId;
+ console.log("cityId",cityId)
  
  if(!ObjectId.isValid(cityId)) return res.status(400).send({status:false,msg:'cityId is not valid'})
 
- let noWeather=await cityModel.findOne({cityId:cityId})
+ let noWeather=await cityModel.findOne({_id:cityId})
+ console.log("noWeather",noWeather)
  if(!noWeather) return res.status(404).send({status:false,msg:"no data found"})
  let weather=await weatherModel.findOne({cityId:cityId}).select({date:1,_id:0,temperature:1,maxTemperature:1,minTemperature:1,condition:1,windSpeed:1,humidity:1,cityId:1}).sort({createdAt:-1})
  return res.status(200).send({status:true,msg:"live weather",data:weather})

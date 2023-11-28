@@ -97,6 +97,7 @@ const getSmallForecast=async function(req,res){
  const viewOtherforecast=async function(req,res){
     try{
           let cityId=req.params.cityId;
+          console.log("cityId",cityId)
           if(!ObjectId.isValid(cityId)) return res.status(400).send({status:false,msg:'cityId is not valid'})
           let viewForecast= await otherForecastModel.findOne({cityId:cityId}).select({_id:0,day1:1,day2:1,day3:1,day4:1,day5:1,day6:1,day7:1,cityId:1}).sort({createdAt:-1})
           return res.status(200).send({status:true,DATA:viewForecast})

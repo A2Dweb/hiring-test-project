@@ -21,13 +21,13 @@ const security = [
       servers: [
    
         {
-            url: process.env.LOCAL_HOST,
+            url: 'http://localhost:3000',
             description: "Local dev"
           
             
         },
         {
-          url:process.env.PRODUCTION_HOST,
+          url:'http://localhost:3000',
           description:"production"
         }
       
