@@ -27,7 +27,7 @@ const security = [
             
         },
         {
-          url:'http://localhost:3000',
+          url: process.env.PRODUCTION_HOST,
           description:"production"
         }
       
