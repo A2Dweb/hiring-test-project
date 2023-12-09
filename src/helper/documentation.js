@@ -27,7 +27,7 @@ const security = [
             
         },
         {
-          url: process.env.PRODUCTION_HOST,
+          url: 'https://hiring-test.a2dweb.com',
           description:"production"
         }
       
